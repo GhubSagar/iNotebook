@@ -6,9 +6,9 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-          const host = process.env.REACT_APP_API_URL;
+          const host = 'https://2b9a-103-58-155-153.ngrok-free.app';
         e.preventDefault();
-        const response = await fetch(`${host}/auth/login`, {
+        const response = await fetch(`${host}/api/auth/login`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json' },
             body: JSON.stringify({email: credentials.email, password: credentials.password})
