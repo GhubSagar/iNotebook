@@ -5,7 +5,7 @@ const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"", email: "", password: "", cpassword:""}) 
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
-    const host = 'https://ce4e-103-58-155-153.ngrok-free.app';
+    const host = 'https://inotebook-api-y2hp.onrender.com';
     e.preventDefault();
     const {name,email,password}= credentials;
     const response = await fetch(`${host}/api/auth/createuser`, {

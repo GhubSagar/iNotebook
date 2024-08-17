@@ -102,11 +102,11 @@ const AddNote = (props) => {
         </div>
         <div className="mb-3">
           <label htmlFor="description" className="form-label">
-            Description (For Expenditure Calculation put '= - :' signs before the amount)
+            Description (For Expenditure Calculation put '= :' signs before the amount)
           </label>
           
           <textarea className="form-control" id="description" name="description" value={note.description}
-            placeholder="To use Expenditure Calculation put '= - :' signs before the amount"
+            placeholder="To use Expenditure Calculation put '= :' signs before the amount"
             onChange={onChange} rows="8" minLength={5} required />
 
             {/* Toggle switch for enabling/disabling expense calculation */}

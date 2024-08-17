@@ -90,7 +90,7 @@ const Notes = (props) => {
                   {/* //FOR MULTILINE TEXT */}
                 <div className="mb-3">  
                     <label htmlFor="description" className="form-label">
-                      Description (For Expenditure Calculation put '= - :' signs before the amount)
+                      Description (For Expenditure Calculation put '= :' signs before the amount)
                     </label>
                     <textarea className="form-control" id="edescription" name="edescription"
                       value={note.edescription} onChange={onChange}

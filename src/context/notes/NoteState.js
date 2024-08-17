@@ -1,9 +1,9 @@
 import NoteContext from "./noteContext";
 import { useState } from "react";
-const token = localStorage.getItem('token');
+
 
 const NoteState = (props) => {
-  const host = 'https://ce4e-103-58-155-153.ngrok-free.app';
+  const host = 'https://inotebook-api-y2hp.onrender.com';
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
   // Get all Notes
@@ -12,7 +12,6 @@ const NoteState = (props) => {
     const response = await fetch(`${host}/api/notes/fetchallnotes`, {
       method: "GET",
       headers: {
-        'Authorization': `Bearer ${token}`,
         "Content-Type": "application/json",
         "auth-token":
         localStorage.getItem('token') 
