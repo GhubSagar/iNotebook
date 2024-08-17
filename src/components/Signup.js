@@ -5,10 +5,10 @@ const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"", email: "", password: "", cpassword:""}) 
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
-    const host = 'https://inotebook-api-y2hp.onrender.com';
+    const host = 'https://inotebook-api-y2hp.onrender.com/api';
     e.preventDefault();
     const {name,email,password}= credentials;
-    const response = await fetch(`${host}/api/auth/createuser`, {
+    const response = await fetch(`${host}/auth/createuser`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({name,email, password})

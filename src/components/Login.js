@@ -6,9 +6,9 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-          const host = 'https://inotebook-api-y2hp.onrender.com';
+          const host = 'https://inotebook-api-y2hp.onrender.com/api';
         e.preventDefault();
-        const response = await fetch(`${host}/api/auth/login`, {
+        const response = await fetch(`${host}/auth/login`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json' },
             body: JSON.stringify({email: credentials.email, password: credentials.password})

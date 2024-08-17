@@ -3,13 +3,13 @@ import { useState } from "react";
 
 
 const NoteState = (props) => {
-  const host = 'https://inotebook-api-y2hp.onrender.com';
+  const host = 'https://inotebook-api-y2hp.onrender.com/api';
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
   // Get all Notes
   const getNotes = async () => {
     // API Call
-    const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+    const response = await fetch(`${host}/notes/fetchallnotes`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const NoteState = (props) => {
   // Add a Note
   const addNote = async (title, description, tag) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${host}/notes/addnote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const NoteState = (props) => {
   // Delete a Note
   const deleteNote = async (id) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+    const response = await fetch(`${host}/notes/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const NoteState = (props) => {
   // Edit a Note
   const editNote = async (id, title, description, tag) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+    const response = await fetch(`${host}/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const NoteState = (props) => {
   const exportNote = async (id,title) => {
     try {
       // API Call
-      const response = await fetch(`${host}/api/notes/exportnote/${id}`, {
+      const response = await fetch(`${host}/notes/exportnote/${id}`, {
         method: "GET", // Assuming this is a GET request to fetch the PDF
         headers: {
           "Content-Type": "application/pdf",
