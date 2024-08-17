@@ -6,7 +6,7 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-          const host = 'https://2b9a-103-58-155-153.ngrok-free.app';
+          const host = 'https://09bb-103-58-155-153.ngrok-free.app';
         e.preventDefault();
         const response = await fetch(`${host}/api/auth/login`, {
             method: 'POST',

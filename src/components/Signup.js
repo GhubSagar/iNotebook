@@ -5,7 +5,7 @@ const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"", email: "", password: "", cpassword:""}) 
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
-    const host = 'https://2b9a-103-58-155-153.ngrok-free.app';
+    const host = 'https://09bb-103-58-155-153.ngrok-free.app';
     e.preventDefault();
     const {name,email,password}= credentials;
     const response = await fetch(`${host}/api/auth/createuser`, {

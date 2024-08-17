@@ -2,7 +2,7 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-  const host = 'https://2b9a-103-58-155-153.ngrok-free.app';
+  const host = 'https://09bb-103-58-155-153.ngrok-free.app';
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
   // Get all Notes
