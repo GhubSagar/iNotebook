@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 const NoteState = (props) => {
-  const host = 'https://inotebook-api-y2hp.onrender.com/api';
+  const host = process.env.REACT_APP_API_URL;
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
   // Get all Notes
