@@ -6,7 +6,7 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-          const host = process.env.REACT_APP_API_URL;
+          const host = 'https://inotebook-api-y2hp.onrender.com/api';
         e.preventDefault();
         const response = await fetch(`${host}/auth/login`, {
             method: 'POST',
